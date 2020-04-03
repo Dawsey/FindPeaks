@@ -49,12 +49,13 @@ show.peaks <- function(data, index = NULL, values, threshold = 0, ...) {
   abline(h = threshold, col = "red") # Show the threshold limit
 
   text(x = quantile((x1pks[, 1]), 0.25),
-       y = quantile(x1pks[, 2], 0.99),
-       adj = c(0.5, 1), paste0("Threshold = ", threshold), srt=0, col = "red")
+       y = threshold,
+       # y = quantile(x1pks[, 2], 0.99),
+       adj = c(0.5, 1), paste0("Threshold = ", threshold), srt = 0, col = "red")
 
   text(x = quantile((x1pks[, 1]), 0.25),
        y = quantile(x1pks[, 2], 0.99),
-       adj = c(0.5, 3), paste0("# of Peaks = ", nrow(x1pks)), srt=0, col = "blue")
+       adj = c(0.5, 3), paste0("# of Peaks = ", nrow(x1pks)), srt = 0, col = "blue")
 
   return(x1pks)
 }
