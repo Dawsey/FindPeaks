@@ -2,18 +2,36 @@
 % Please edit documentation in R/FindPeaks.R
 \name{show.peaks}
 \alias{show.peaks}
-\title{show.peaks}
+\title{Show timeseries peak values above a threshold}
 \usage{
-show.peaks(x, threshold = 0, ...)
+show.peaks(data, index = NULL, values, threshold = 0, ...)
 }
 \arguments{
-\item{x}{Path to the input file}
+\item{data}{a dataframe containing the measurements and optional index variables}
 
-\item{threshold}{the value above which to calculate peaks}
+\item{index}{column reference entered as a character variable to the indices. Indices are plotted on the x axis. Observations can be either a date or numeric format.}
+
+\item{values}{column reference entered as a character variable to the values against which the peak values are calculated. Observations ust be numeric format}
+
+\item{threshold}{a numeric value above which to calculate peaks.}
+
+\item{...}{other arguments to pass to the plot function.}
 }
 \value{
-A plot of the peaks at the specified threshold
+A plot of the peaks at the specified threshold and Peak value data that can be assigned to an object
 }
 \description{
 This function plots the peak values above the entered threshold argument.
+}
+\examples{
+data(waves)
+show.peaks(data = waves,
+           index = "date_time",
+           values = "height_meters",
+           threshold = 1.3)
+
+# To show data without a date/time index
+show.peaks(data = waves,
+           values = "height_meters",
+           threshold = 1.3)
 }
