@@ -2,7 +2,7 @@
 % Please edit documentation in R/FindPeaks.R
 \name{show.peaks}
 \alias{show.peaks}
-\title{Plot peaks}
+\title{show.peaks}
 \usage{
 show.peaks(x, threshold = 0, ...)
 }

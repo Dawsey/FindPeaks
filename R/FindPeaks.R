@@ -1,4 +1,4 @@
-#' Plot peaks
+#' show.peaks
 #'
 #' This function plots the peak values above the entered threshold argument.
 #'

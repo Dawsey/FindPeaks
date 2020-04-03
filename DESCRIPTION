@@ -1,4 +1,4 @@
-Package: TestPackage
+Package: FindPeaks
 Type: Package
 Title: This is for me to experiment with packages
 Version: 0.1.0
