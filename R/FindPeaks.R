@@ -33,7 +33,7 @@ show.peaks <- function(data, index = NULL, values, threshold = 0, ...) {
      x <- {{data}} %>%
        mutate(index = as.numeric(row.names({{data}}))) %>%
        select(index, {{values}})
-     row.names(x) <- NULL
+
    }
 
   # Identify peaks
@@ -41,6 +41,8 @@ show.peaks <- function(data, index = NULL, values, threshold = 0, ...) {
 
   # Subset the peaks based on the threshold
   x1pks <- subset(x[pks, ], x[pks, 2] > threshold)
+
+  row.names(x1pks) <- NULL
 
   plot(x[, ], type="l", ...)
   points(x1pks, col="blue") # Show peaks above threshold
