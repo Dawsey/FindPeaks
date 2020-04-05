@@ -2,3 +2,8 @@
 
 export(show.peaks)
 import(dplyr)
+importFrom(graphics,abline)
+importFrom(graphics,plot)
+importFrom(graphics,points)
+importFrom(graphics,text)
+importFrom(stats,quantile)

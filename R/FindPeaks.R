@@ -8,6 +8,8 @@
 #' @param threshold a numeric value above which to calculate peaks.
 #' @param ... other arguments to pass to the plot function.
 #' @import dplyr
+#' @importFrom graphics abline plot points text
+#' @importFrom stats quantile
 #' @return A plot of the peaks at the specified threshold and Peak value data that can be assigned to an object
 #' @examples
 #' data(waves)
